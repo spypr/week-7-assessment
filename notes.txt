@@ -1,0 +1,25 @@
+Results for the extraLargeArray
+insert 736.2853 ms
+append 2.2089 ms
+
+Results for the largeArray
+insert 7.0444 ms
+append 475 µs
+
+Results for the mediumArray
+insert 160 µs
+append 210.6 µs
+
+Results for the smallArray
+insert 35.1 µs
+append 85.5 µs
+
+Results for the tinyArray
+insert 27.9 µs
+append 93.8 µs
+
+insert: 27.9 µs   35.1 µs   160 µs     7.00444ms    736.2853ms
+append: 93.8 µs   85.5 µs   210.6 µs   475 µs       2.2089ms
+
+This data shows that the insert method gets worse as more data is passed through it.  The append method is more linear in the results.  The append method doesn't have to move data around in the array, it just adds it onto the end of the array.  The insert method has to move data and a store that data as the new data is being added to the front of the array, which increases the runtime as it does it.  As long as small to medium amounts of data are passed through both methods the results aren't that much differenet.  In conclusion, the append method is better because the function takes less effort.
+
